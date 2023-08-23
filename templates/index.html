@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <title>konesans</title>
+</head>
+
+<body> 
+    <!--mete yon gran tit -->    
+    <img src="\static\image\hello.png" alt="image">
+
+   <form action = "greet" method="post"> 
+        <!--ajoute yon paragraf -->
+        {% for message in get_flashed_messages() %}
+            <p> {{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="nom_input" autocomplete="off" >
+        <br>
+        <input type="submit" value="salye" id="btn_send">  
+   </form>
+
+</body>
+
+</html>
